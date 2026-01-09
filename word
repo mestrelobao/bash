@@ -1,0 +1,11 @@
+#!/bin/bash 
+mapfile -t array < mare.txt
+
+read -ra palavra <<< "${array[0]}"
+
+
+if [[ "${palavra[0]}" == "Janeiro" ]]; then
+
+echo "a primeira palavra é ${palavra[0]}"
+
+fi
