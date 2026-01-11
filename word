@@ -1,0 +1,12 @@
+#!/bin/bash
+mapfile -t array < mare.txt
+
+for i in "${!array[@]}"; do
+
+if [[ "${array[i]}" == "17" || "${array[i]}" == "20" ]]; then
+
+echo "$i - ${array[i]}"
+
+fi
+
+done
