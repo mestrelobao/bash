@@ -1,0 +1,49 @@
+#!/bin/bash
+
+mapfile -t array < Janeiro.txt
+
+total=${#array[@]}
+
+echo "{" >> janeiro.json
+
+for ((i=0; i <=$total; i++)); do
+
+if [[ "${array[i]}" == "01" || "${array[i]}" == "02" || "${array[i]}" == "03" || "${array[i]}" == "04" || "${array[i]}" == "05" || "${array[i]}" == "06" || "${array[i]}" == "07" || "${array[i]}" == "08" || "${array[i]}" == "09" || "${array[i]}" == "10" || "${array[i]}" == "11" || "${array[i]}" == "12" || "${array[i]}" == "13" || "${array[i]}" == "14" || "${array[i]}" == "15" || "${array[i]}" == "16" || "${array[i]}" == "17" || "${array[i]}" == "18" || "${array[i]}" == "19" || "${array[i]}" == "20" || "${array[i]}" == "21" || "${array[i]}" == "22" || "${array[i]}" == "23" || "${array[i]}" == "24" || "${array[i]}" == "25" || "${array[i]}" == "26" || "${array[i]}" == "27" || "${array[i]}" == "28" || "${array[i]}" == "29" || "${array[i]}" == "30" || "${array[i]}" == "31" ]]; then
+
+echo "\"janeiro${array[i]}\" : [" >> janeiro.json
+
+echo "\"${array[($i+2)]}\"," >> janeiro.json
+
+echo "\"${array[($i+3)]}\"," >> janeiro.json
+
+#echo "\"${array[($i+4)]}\"," >> janeiro.json
+
+if [[ ${#array[($i+5)]} -gt 3 ]]; then
+
+echo "\"${array[($i+4)]}\"," >> janeiro.json
+echo "\"${array[($i+5)]}\"" >> janeiro.json
+
+else
+
+echo "\"${array[($i+4)]}\"" >> janeiro.json
+
+fi
+
+parcial=$total-6
+
+if [[ $i -eq $parcial ]]; then
+
+echo "]" >> janeiro.json
+echo "}" >> janeiro.json
+
+else
+
+echo "]," >> janeiro.json
+
+fi
+
+#echo "]," 
+
+fi
+
+done
