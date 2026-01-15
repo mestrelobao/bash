@@ -6,7 +6,7 @@
   <h1>Linux online Terminal</h1>
     <p>https://bellard.org/jslinux/vm.html?cpu=riscv64&url=fedora33-riscv.cfg&mem=256</p>
    <br>
-    <p>https://github.com/makerhero/xpt2046-LCD-Driver-for-Raspberry-Pi</p>
+    <p>https://tengfone.medium.com/setting-up-raspberry-pi-4-3-5-touch-screen-xpt2046-349e484a7813</p>
 </body>
 </body>
 </html>
