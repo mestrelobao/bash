@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+echo "1 - Alpha Boys School Radio"
+echo "2 - Jazz Radio"
+read radio
+if [ $radio -eq 1 ]; then
+clear
+echo "CTRL + C para sair"
+cvlc http://alphaboys-live.streamguys1.com/alphaboys.aac
+else
+clear
+echo "CTRL + C para sair"
+cvlc https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3
+fi
